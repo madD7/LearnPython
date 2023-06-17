@@ -82,8 +82,11 @@ if __name__ == "__main__":
     # Passing a function to a decorator function
     # This is same a using a @ decorator.
     print("Passing newFuncVar to a decorator function")
-    func_returned = new_decorator(newFuncVar)
-    func_returned()
+    # Basically, you send your function to be wrapped between/with some extra code.
+    # The wrapped function is returned back, that you assign to same funcNameVariable
+    newFuncVar = new_decorator(newFuncVar)
+    # And then you  execute the funcNameVariable, ie. the original code with extra wrapper code.
+    newFuncVar()
 
     # This function will print the lines of the wrap_func
     print("Executing Decorated function")
